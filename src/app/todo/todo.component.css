@@ -1,0 +1,4 @@
+.ng-invalid:not(form){
+    border-left: 5px solid red;
+}
+/* we could also write input.ng-invalid.ng-touched */

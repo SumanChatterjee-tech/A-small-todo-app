@@ -1,0 +1,17 @@
+<h1>Update Todos</h1>
+<div class="container">
+    <form #todoForm="ngForm" (ngSubmit)="saveTodo(todoForm)">
+        <fieldset class="form-group">
+            <label>Description</label>
+            <input type="text" class="form-control" #description="ngModel" name="description" [(ngModel)]="objChangedTodo.description" required="required">
+                <div *ngIf="todoForm.touched && todoForm.invalid" class="alert alert-warning">Description is required</div>
+        </fieldset>
+        <fieldset class="form-group">
+            <label>Target Date</label>
+            <input type="date" class="form-control" name="targetDate" [ngModel]="objChangedTodo.targetDate|date:'yyy-MM-dd' " (ngModelChange)="objChangedTodo.targetDate = $event" required>
+        </fieldset>
+        <div id="makeTheButtonInMiddle">
+        <button type="submit" class="btn btn-success">Save</button>
+        </div>
+    </form>
+</div>

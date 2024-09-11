@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import url(https://unpkg.com/bootstrap@4.3.1/dist/css/bootstrap.min.css);
+@media all {
+    #makeTheButtonInMiddle{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
